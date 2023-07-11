@@ -49,7 +49,7 @@ public class Calculadora {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Calculadora calculadora = new Calculadora();
         frame.setContentPane(calculadora.Principal);
-        frame.setSize(300, 400); // Establecer tamaño inicial
+        frame.setSize(700, 700); // Establecer tamaño inicial
         frame.setResizable(false); // Bloquear redimensionamiento
         frame.setVisible(true);
     }
