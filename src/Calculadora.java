@@ -40,7 +40,6 @@ public class Calculadora {
     private JButton botonInversoTan;
     private JRadioButton RADRadioButton;
     private JRadioButton DEGRadioButton;
-    private JLabel ResultadoTercero;
     private boolean igual, inicio = true, operacion1, operacion2;
     private double a, b, c, cos, acos, sin, asin, tan, atan, resultado, valor1, valor2;
     private String cadena, funciones, tipoOperaciones;
@@ -449,11 +448,7 @@ public class Calculadora {
         botonInversoCos.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-<<<<<<< HEAD
                 funciones = "cos-1";
-=======
-                funciones = "acos";
->>>>>>> be46661f8ea4d5f1a94a1f9bf41cad8dab82f9d7
                 Trigonometria();
             }
         });
@@ -461,11 +456,7 @@ public class Calculadora {
         botonInversoSeno.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-<<<<<<< HEAD
                 funciones = "sen-1";
-=======
-                funciones = "asin";
->>>>>>> be46661f8ea4d5f1a94a1f9bf41cad8dab82f9d7
                 Trigonometria();
             }
         });
@@ -473,11 +464,7 @@ public class Calculadora {
         botonInversoTan.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-<<<<<<< HEAD
                 funciones = "tan-1";
-=======
-                funciones = "atan";
->>>>>>> be46661f8ea4d5f1a94a1f9bf41cad8dab82f9d7
                 Trigonometria();
             }
         });
@@ -539,7 +526,7 @@ public class Calculadora {
 
     //switch para las funciones trigonometricas
     private void Trigonometria() {
-        if (DEGRadioButton.isSelected()) {
+        if (RADRadioButton.isSelected()) {
             switch (funciones) {
                 // Seno
                 case "sin":
@@ -585,7 +572,7 @@ public class Calculadora {
                     break;
             }
         } else {
-            if (RADRadioButton.isSelected()) {
+            if (DEGRadioButton.isSelected()) {
                 switch (funciones) {
                     // Seno
                     case "sin":
