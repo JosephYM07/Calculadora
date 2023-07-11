@@ -295,12 +295,14 @@ public class Calculadora {
             public void actionPerformed(ActionEvent e) {
                 igual = true;
                 inicio = true;
+                //Condicion para la variable Operacion1
                 if (operacion1 == true) {
                     valor1 = Double.parseDouble(ResultadoPrincipal.getText());
                     ResultadoSecundario.setText(ResultadoPrincipal.getText() + "");
                     ResultadoSecundario.setText(ResultadoPrincipal.getText() + " + ");
                     operacion2 = false;
                 } else {
+                    // condicion para la variable operacion2
                     if (operacion2 = true) {
                         valor2 = Double.parseDouble(ResultadoPrincipal.getText());
                         ResultadoSecundario.setText("");
@@ -320,12 +322,14 @@ public class Calculadora {
             public void actionPerformed(ActionEvent e) {
                 igual = true;
                 inicio = true;
+                // condicion para la variable operacion1
                 if (operacion1 = true) {
                     valor1 = Double.parseDouble(ResultadoPrincipal.getText());
                     ResultadoSecundario.setText("");
                     ResultadoSecundario.setText(ResultadoPrincipal.getText() + " - ");
                     operacion1 = false;
                 } else {
+                    // condicion para la variable operacion2
                     if (operacion2 = true) {
                         valor2 = Double.parseDouble(ResultadoPrincipal.getText());
                         ResultadoSecundario.setText("");
@@ -345,12 +349,14 @@ public class Calculadora {
             public void actionPerformed(ActionEvent e) {
                 igual = true;
                 inicio = true;
+                // condicion para la variable operacion1
                 if (operacion1 = true) {
                     valor1 = Double.parseDouble(ResultadoPrincipal.getText());
                     ResultadoSecundario.setText("");
                     ResultadoSecundario.setText(ResultadoPrincipal.getText() + " x ");
                     operacion1 = false;
                 } else {
+                    // condicion para la variable operacion2
                     if (operacion2 = true) {
                         valor2 = Double.parseDouble(ResultadoPrincipal.getText());
                         ResultadoSecundario.setText("");
@@ -572,42 +578,42 @@ public class Calculadora {
                     // Seno
                     case "sin":
                         valor1 = Double.parseDouble(ResultadoPrincipal.getText());
-                        ResultadoSecundario.setText("sin( " + valor1 + " )");
+                        ResultadoSecundario.setText("sin_r( " + valor1 + " )");
                         sin = Math.sin(valor1);
                         ResultadoPrincipal.setText(sin + " ");
                         break;
                     // Seno Inverso
                     case "asin":
                         valor1 = Double.parseDouble(ResultadoPrincipal.getText());
-                        ResultadoSecundario.setText("asin( " + valor1 + " )");
+                        ResultadoSecundario.setText("asin_r( " + valor1 + " )");
                         asin = Math.asin(valor1);
                         ResultadoPrincipal.setText(asin + " ");
                         break;
                     // Coseno
                     case "cos":
                         valor1 = Double.parseDouble(ResultadoPrincipal.getText());
-                        ResultadoSecundario.setText("cos( " + valor1 + " )");
+                        ResultadoSecundario.setText("cos_r( " + valor1 + " )");
                         cos = Math.cos(valor1);
                         ResultadoPrincipal.setText(cos + " ");
                         break;
                     // Coseno Inverso
                     case "acos":
                         valor1 = Double.parseDouble(ResultadoPrincipal.getText());
-                        ResultadoSecundario.setText("acos( " + valor1 + " )");
+                        ResultadoSecundario.setText("acos_r( " + valor1 + " )");
                         acos = Math.acos(valor1);
                         ResultadoPrincipal.setText(acos + " ");
                         break;
                     // Tangente
                     case "tan":
                         valor1 = Double.parseDouble(ResultadoPrincipal.getText());
-                        ResultadoSecundario.setText("tan( " + valor1 + " )");
+                        ResultadoSecundario.setText("tan_r( " + valor1 + " )");
                         tan = Math.tan(valor1);
                         ResultadoPrincipal.setText(tan + " ");
                         break;
                     // Seno Inverso
                     case "atan":
                         valor1 = Double.parseDouble(ResultadoPrincipal.getText());
-                        ResultadoSecundario.setText("atan( " + valor1 + " )");
+                        ResultadoSecundario.setText("atan_r( " + valor1 + " )");
                         atan = Math.atan(valor1);
                         ResultadoPrincipal.setText(atan + " ");
                         break;
