@@ -50,7 +50,7 @@ public class Calculadora {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Calculadora calculadora = new Calculadora();
         frame.setContentPane(calculadora.Principal);
-        frame.setSize(700, 700); // Establecer tamaño inicial
+        frame.setSize(300, 400); // Establecer tamaño inicial
         frame.setResizable(false); // Bloquear redimensionamiento
         frame.setVisible(true);
     }
@@ -449,7 +449,11 @@ public class Calculadora {
         botonInversoCos.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+<<<<<<< HEAD
+                funciones = "cos-1";
+=======
                 funciones = "acos";
+>>>>>>> be46661f8ea4d5f1a94a1f9bf41cad8dab82f9d7
                 Trigonometria();
             }
         });
@@ -457,7 +461,11 @@ public class Calculadora {
         botonInversoSeno.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+<<<<<<< HEAD
+                funciones = "sen-1";
+=======
                 funciones = "asin";
+>>>>>>> be46661f8ea4d5f1a94a1f9bf41cad8dab82f9d7
                 Trigonometria();
             }
         });
@@ -465,7 +473,11 @@ public class Calculadora {
         botonInversoTan.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+<<<<<<< HEAD
+                funciones = "tan-1";
+=======
                 funciones = "atan";
+>>>>>>> be46661f8ea4d5f1a94a1f9bf41cad8dab82f9d7
                 Trigonometria();
             }
         });
