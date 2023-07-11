@@ -40,6 +40,7 @@ public class Calculadora {
     private JButton botonInversoTan;
     private JRadioButton RADRadioButton;
     private JRadioButton DEGRadioButton;
+    private JLabel ResultadoTercero;
     private boolean igual, inicio = true, operacion1, operacion2;
     private double a, b, c, cos, acos, sin, asin, tan, atan, resultado, valor1, valor2;
     private String cadena, funciones, tipoOperaciones;
@@ -432,45 +433,40 @@ public class Calculadora {
         botonCos.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                valor1 = Double.parseDouble(ResultadoPrincipal.getText());
-                ResultadoSecundario.setText("cos(" + valor1 + " )");
-                ResultadoPrincipal.setText(Math.cos(valor1) + " ");
+                funciones = "cos";
+                Trigonometria();
             }
         });
         //Inicio boton con la funcion de tangente
         botonTan.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                valor1 = Double.parseDouble(ResultadoPrincipal.getText());
-                ResultadoSecundario.setText("tan(" + valor1 + " )");
-                ResultadoPrincipal.setText(Math.tan(valor1) + " ");
+                funciones = "tan";
+                Trigonometria();
             }
         });
         //Boton inverso del coseno
         botonInversoCos.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                valor1 = Double.parseDouble(ResultadoPrincipal.getText());
-                ResultadoSecundario.setText("cos-1(" + valor1 + " )");
-                ResultadoPrincipal.setText(Math.acos(valor1) + " ");
+                funciones = "acos";
+                Trigonometria();
             }
         });
         //Boton inverso del seno
         botonInversoSeno.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                valor1 = Double.parseDouble(ResultadoPrincipal.getText());
-                ResultadoSecundario.setText("sin-1(" + valor1 + " )");
-                ResultadoPrincipal.setText(Math.asin(valor1) + " ");
+                funciones = "asin";
+                Trigonometria();
             }
         });
         //Boton inverso de la tangente
         botonInversoTan.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                valor1 = Double.parseDouble(ResultadoPrincipal.getText());
-                ResultadoSecundario.setText("tan-1(" + valor1 + " )");
-                ResultadoPrincipal.setText(Math.atan(valor1) + " ");
+                funciones = "atan";
+                Trigonometria();
             }
         });
     }
@@ -531,7 +527,7 @@ public class Calculadora {
 
     //switch para las funciones trigonometricas
     private void Trigonometria() {
-        if (RADRadioButton.isSelected()) {
+        if (DEGRadioButton.isSelected()) {
             switch (funciones) {
                 // Seno
                 case "sin":
@@ -577,7 +573,7 @@ public class Calculadora {
                     break;
             }
         } else {
-            if (DEGRadioButton.isSelected()) {
+            if (RADRadioButton.isSelected()) {
                 switch (funciones) {
                     // Seno
                     case "sin":
